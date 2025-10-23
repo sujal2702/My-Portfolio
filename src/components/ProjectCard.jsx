@@ -11,40 +11,41 @@ const ProjectCard = ({ project, isExpanded, onToggle }) => {
       transition={{ duration: 0.4 }}
     >
       {/* Project Header */}
-      <div className="p-6">
-        <div className="flex justify-between items-start mb-4">
-          <div className="flex-1">
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+      <div className="p-4 sm:p-6">
+        <div className="mb-4">
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3 mb-3">
+            <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">
               {project.title}
             </h3>
-            <p className="text-gray-600 dark:text-gray-400 text-sm">
-              {project.description}
-            </p>
+            
+            {/* Project Links */}
+            <div className="flex gap-3 flex-wrap">
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors font-medium whitespace-nowrap"
+                >
+                  {project.githubLabel || 'Project Link'}
+                </a>
+              )}
+              {project.live && (
+                <a
+                  href={project.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors font-medium whitespace-nowrap"
+                >
+                  {project.liveLabel || 'View Application'}
+                </a>
+              )}
+            </div>
           </div>
           
-          {/* Project Links */}
-          <div className="flex gap-3 ml-4">
-            {project.github && (
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors font-medium whitespace-nowrap"
-              >
-                {project.githubLabel || 'Project Link'}
-              </a>
-            )}
-            {project.live && (
-              <a
-                href={project.live}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors font-medium whitespace-nowrap"
-              >
-                {project.liveLabel || 'View Application'}
-              </a>
-            )}
-          </div>
+          <p className="text-gray-600 dark:text-gray-400 text-sm">
+            {project.description}
+          </p>
         </div>
 
         {/* Project Cover */}
@@ -89,8 +90,8 @@ const ProjectCard = ({ project, isExpanded, onToggle }) => {
             transition={{ duration: 0.3 }}
             className="overflow-hidden border-t border-gray-200 dark:border-gray-700"
           >
-            <div className="p-6 bg-gray-50 dark:bg-gray-800">
-              <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+            <div className="p-4 sm:p-6 bg-gray-50 dark:bg-gray-800">
+              <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed text-sm sm:text-base">
                 {project.fullDescription}
               </p>
               
@@ -103,8 +104,8 @@ const ProjectCard = ({ project, isExpanded, onToggle }) => {
                     key={index}
                     className="flex items-start text-gray-700 dark:text-gray-300"
                   >
-                    <span className="text-blue-600 dark:text-blue-400 mr-2 mt-1">•</span>
-                    <span className="text-sm">{feature}</span>
+                    <span className="text-blue-600 dark:text-blue-400 mr-2 mt-1 flex-shrink-0">•</span>
+                    <span className="text-sm leading-relaxed">{feature}</span>
                   </li>
                 ))}
               </ul>
