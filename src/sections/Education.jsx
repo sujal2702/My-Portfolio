@@ -12,24 +12,6 @@ const Education = () => {
       duration: '2023 - Present',
       cgpa: 'GPA: 8.59',
       achievements: []
-    },
-    {
-      degree: 'Senior Secondary (XII, PCM)',
-      specialization: '',
-      institution: "St. Joseph's School, Shaktinagar, U.P",
-      location: 'Shaktinagar, Uttar Pradesh',
-      duration: '2021 - 2022',
-      cgpa: 'Percentage: 78.2%',
-      achievements: []
-    },
-    {
-      degree: 'Secondary (X)',
-      specialization: '',
-      institution: "St. Joseph's School, Shaktinagar, U.P",
-      location: 'Shaktinagar, Uttar Pradesh',
-      duration: '2019 - 2020',
-      cgpa: 'Percentage: 81.4%',
-      achievements: []
     }
   ];
 
