@@ -61,7 +61,7 @@ const Hero = () => {
             </Button>
             <Button 
               variant="secondary"
-              href="https://drive.google.com/file/d/1EPhgjXV_p4bB92LKazNEAdS46Wwe-b5V/view?usp=drivesdk"
+              href="https://drive.google.com/file/d/1y48SWGt37HDuHyzFkU6jPdH7y5qx_AzI/view?usp=drivesdk"
             >
               Download Resume
             </Button>
