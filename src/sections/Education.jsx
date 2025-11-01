@@ -6,12 +6,9 @@ const Education = () => {
   const education = [
     {
       degree: 'Bachelor of Engineering in Computer Science',
-      specialization: '',
       institution: 'Dayananda Sagar Institution, Bengaluru',
-      location: 'Bengaluru, Karnataka, India',
       duration: '2023 - Present',
-      cgpa: 'GPA: 8.59',
-      achievements: []
+      cgpa: 'GPA: 8.59'
     }
   ];
 
@@ -35,11 +32,6 @@ const Education = () => {
                   <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-1">
                     {edu.degree}
                   </h3>
-                  {edu.specialization && (
-                    <p className="text-md font-medium text-blue-600 dark:text-blue-400 mb-2">
-                      {edu.specialization}
-                    </p>
-                  )}
                 </div>
                 <span className="text-sm font-medium text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-md whitespace-nowrap">
                   {edu.duration}

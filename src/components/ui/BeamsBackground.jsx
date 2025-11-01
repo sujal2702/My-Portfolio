@@ -14,7 +14,6 @@ export function BeamsBackground({ className }) {
     if (!ctx) return;
 
     let beams = [];
-    let frameCount = 0;
 
     const updateCanvasSize = () => {
       const dpr = Math.min(window.devicePixelRatio || 1, 2);
